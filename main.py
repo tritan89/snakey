@@ -65,6 +65,25 @@ def move(game_state: typing.Dict) -> typing.Dict:
     # TODO: Step 1 - Prevent your Battlesnake from moving out of bounds
     # board_width = game_state['board']['width']
     # board_height = game_state['board']['height']
+    #check left side of the board
+    if my_head["x"] == 10:
+        print("cant go right")
+        is_move_safe["right"] = False
+
+    if my_head["x"] == 0:
+        print("cant go left")
+        is_move_safe["left"] = False
+
+    if my_head["y"] == 0:
+        print("cant go down")
+        is_move_safe["down"] = False
+
+    if my_head["y"] == 10:
+        print("cant go up")
+        is_move_safe["up"] = False
+
+
+
 
     # TODO: Step 2 - Prevent your Battlesnake from colliding with itself
     # my_body = game_state['you']['body']
@@ -90,6 +109,7 @@ def move(game_state: typing.Dict) -> typing.Dict:
 
     print(f"MOVE {game_state['turn']}: {next_move}")
     return {"move": next_move}
+
 
 
 # Start server when `python main.py` is run
