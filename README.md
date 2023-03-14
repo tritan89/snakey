@@ -19,7 +19,7 @@ Then we moved towards the food by choosing the best possible move out of our giv
 
 After testing this functionality we found that if another snake was implementing the same strategy then we would end up colliding head to head and die quite often. To eliminate this behaviour we checked if there was an enemy head within 2 spaces of the food we were going for and if there was then we checked its length, If it was less than ours we would continue onto the food else we would pick the next closest food. 
 
-#results
+# results
 
 In the tournament we competed in our snake was able to make it past the first round and almost into the third round. Overall this experience taught me how to make quick decisions, collaborate quickly and effectively, and code well under pressure. I would like to try another battlesnake tournament next time building the snake a few weeks in advance to improve its performance.  
 
