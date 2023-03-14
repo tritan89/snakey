@@ -1,59 +1,18 @@
 # Battlesnake Python Starter Project
 
-An official Battlesnake template written in Python. Get started at [play.battlesnake.com](https://play.battlesnake.com).
+
 
 ![Battlesnake Logo](https://media.battlesnake.com/social/StarterSnakeGitHubRepos_Python.png)
 
-This project is a great starting point for anyone wanting to program their first Battlesnake in Python. It can be run locally or easily deployed to a cloud provider of your choosing. See the [Battlesnake API Docs](https://docs.battlesnake.com/api) for more detail. 
+This project was done during a hackathon by myself and Carson Jennings on March 11, 2023. 
 
-[![Run on Replit](https://repl.it/badge/github/BattlesnakeOfficial/starter-snake-python)](https://replit.com/@Battlesnake/starter-snake-python)
+During this competition we successfully implemented an snake that could navigate to collect food and avoid going head to head with snakes of equal or greater length.
 
-## Technologies Used
+We began with the python starter code to implment our snake in, we quickly figured out how to build the basic snake so it would
 
-This project uses [Python 3](https://www.python.org/) and [Flask](https://flask.palletsprojects.com/). It also comes with an optional [Dockerfile](https://docs.docker.com/engine/reference/builder/) to help with deployment.
+1. not run into walls 
+2. not run into itself
+3. not run into other snakes 
 
-## Run Your Battlesnake
+Our first challenge was to figure out how to make our snake navigate towards food. Our stratagey was to find the nearest food then head in a straight line towards it. To do this we searched through the list of foods then calcuted the distance from our head to the nearest one by 
 
-Install dependencies using pip
-
-```sh
-pip install -r requirements.txt
-```
-
-Start your Battlesnake
-
-```sh
-python main.py
-```
-
-You should see the following output once it is running
-
-```sh
-Running your Battlesnake at http://0.0.0.0:8000
- * Serving Flask app 'My Battlesnake'
- * Debug mode: off
-```
-
-Open [localhost:8000](http://localhost:8000) in your browser and you should see
-
-```json
-{"apiversion":"1","author":"","color":"#888888","head":"default","tail":"default"}
-```
-
-## Play a Game Locally
-
-Install the [Battlesnake CLI](https://github.com/BattlesnakeOfficial/rules/tree/main/cli)
-* You can [download compiled binaries here](https://github.com/BattlesnakeOfficial/rules/releases)
-* or [install as a go package](https://github.com/BattlesnakeOfficial/rules/tree/main/cli#installation) (requires Go 1.18 or higher)
-
-Command to run a local game
-
-```sh
-battlesnake play -W 11 -H 11 --name 'Python Starter Project' --url http://localhost:8000 -g solo --browser
-```
-
-## Next Steps
-
-Continue with the [Battlesnake Quickstart Guide](https://docs.battlesnake.com/quickstart) to customize and improve your Battlesnake's behavior.
-
-**Note:** To play games on [play.battlesnake.com](https://play.battlesnake.com) you'll need to deploy your Battlesnake to a live web server OR use a port forwarding tool like [ngrok](https://ngrok.com/) to access your server locally.
